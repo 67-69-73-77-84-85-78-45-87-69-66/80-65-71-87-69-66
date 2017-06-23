@@ -1,0 +1,513 @@
+/* General */
+
+*{
+	padding:0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	margin:0;
+	padding:0;
+	display: table;
+}
+
+body{
+	background:#FFFFFF;
+	background:url(../images/background/bgPatron.png);
+ 	background-attachment: fixed;
+  background-repeat:repeat;
+ 	font-family:helvetica, arial, sans-serif;
+	text-decoration: none;
+/*
+    background-size:cover;
+*/
+}
+
+
+	main{
+		width: 100%;
+	}
+
+	.general{
+		display: table-row-group;
+	}
+
+/* Cabezera */
+
+		header{
+			width: 100%;
+			position: fixed;
+			text-align: center;
+			background:rgb(177,178,176);
+		}
+
+			header div{
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+				header div a{
+					cursor: pointer;
+					margin: 0;
+					padding: 6px 5px 6px 5px;
+					float:left;
+					border-right: 2px solid black;
+				}
+					header div a:hover{
+						background-color: white;
+					}
+
+			header nav{
+				z-index: 1000;
+				max-width: 1000px;
+				margin: auto;
+				z-index: 1000;
+			}
+				header nav ul{
+					list-style: none;
+				}
+					header nav 	ul li{
+						height: 32px;
+						width: 80px;
+						display: inline-block;
+						position: relative;
+                        
+					}
+						header nav ul li:hover{
+							background:white;
+						 }
+					 header nav ul li a{
+						display: block;
+					 	color: black;
+						padding: 7px 0px;
+                        text-decoration: none;
+					}
+						header nav ul li:hover .subList{
+							display: block;
+						}
+						header nav ul li .subList{
+							display: none;
+							position: absolute;
+							width: 100%;
+							z-index: 1000;
+						}
+							header nav ul li .subList li:hover{
+								background: white;
+							}
+							header nav ul li .subList li{
+								display: block;
+								overflow: hidden;
+								background-color: rgb(177,178,176);
+								width: 100%;
+                                text-decoration: none;
+							}
+								header nav ul li ul li a{
+									display: block;
+								}
+		/* Menu para pantalla de 500px o menos*/
+		@media (max-width:500px){
+		header{
+			width: 100%;
+			background: none;
+		}
+
+			header div{
+				display: block;
+				width: 100%;
+				background:rgba(177,178,176,0.8);
+				overflow: hidden;
+				border: none;
+			}
+
+			header nav{
+				position:fixed;
+				width: 50%;
+				height: 100% ;
+				left: -100%;
+				margin:0;
+				overflow: scroll;
+				background: rgba(177,178,176,0.8);
+				border-top: 2px solid rgba(160,168,166,0.8);
+				z-index: 1002;
+			}
+					header nav ul li{
+						width: 100%;
+						position: relative;
+					}
+						header nav ul li a{
+							display: block;
+						}
+						header nav ul li:hover .subList{
+							display: block;
+						}
+						header nav ul li .subList{
+							display:none;
+							position: relative;
+							width: 100%;
+							z-index: 1002;
+						}
+								header nav ul li .subList li{
+									position: relative;
+									border-top: 1px dashed rgba(120,128,126,0.8);
+								}
+		}
+
+/* Cuerpo */
+
+			section{
+				margin: auto;
+				height: auto;
+			}
+	/* Portada */
+
+				section.facebook{
+					height: 440px;
+					width: 100%;
+					margin-bottom: 10px;
+					border: 1px;
+					border-color: black;
+					border-style: solid;
+				}
+					/* Slider de la portada */
+
+					section.facebook h2.sliderTitle{
+						display: none;
+						margin: 32px  0 0 0 ;
+						font-family: arial,helvetica,sans-serif;
+						font-size: 30px;
+						font-weight: 700;
+					}
+
+
+					section.facebook div.sliderFacebook{
+						display: none;
+						margin: 0;
+						padding: 0;
+						width: 100%;
+						height: 100%;
+						border: 3px solid rgba(30,255,0,1);
+					}
+						section.facebook div.sliderFacebook ul{
+							width: 100%;
+							height: 100%;
+							margin: 0;
+							padding: 0;
+							position: relative;
+							overflow: hidden;
+						}	
+
+
+				/* Informacion Principal mostrada al inicio en Circulos*/
+				section.firstInfo{
+					width: 80%;
+					max-width: 1000px;
+					height: auto;
+					margin: auto;
+					padding: 0;
+					margin-bottom: 30px;
+				}
+					section.firstInfo ul{
+						margin: auto;
+						padding: 0;
+						max-width: 660;
+						list-style: none;
+						text-align: center;
+						display: table;
+					}
+						section.firstInfo ul li{
+							width:200px;
+							height:200px;
+							margin: auto;
+							margin-left:20px;
+							margin-bottom: 20px;
+							padding: 0;
+							display: inline-block;
+							vertical-align: top;
+							text-align: center;
+							background-color: rgba(124,113,248,0.7);
+						}
+							section.firstInfo ul li div{
+								text-align: center;
+							}
+								section.firstInfo ul li div.visitors{
+									margin:  55px 20px 55px 20px;
+									padding: 0;
+									text-align: center;
+									height: auto;
+								}
+									section.firstInfo ul li div.visitors h6{
+										margin: auto;
+										font-size: 30px;
+										font-weight: bold;
+										padding: 0;
+										text-align: center;
+									}
+									section.firstInfo ul li div.visitors a{
+										margin: auto;
+										text-align: center;
+										padding: 0;
+									}
+										section.firstInfo ul li div.visitors a img{
+											margin: auto;
+											padding: 0;
+											height: 56px;
+											width: 160px;
+										}
+
+								section.firstInfo ul li.1FirstInfo{
+									margin: 0 auto;
+									padding: 0 ;
+								}
+									section.firstInfo ul li.1FirstInfo div.buho{
+										margin: 0 auto;
+										padding: 0;
+									}
+										section.firstInfo ul li div.buho a{
+											margin:auto;
+											padding: 0;
+										}
+											section.firstInfo ul li div.buho a img{
+												margin: 20px;
+												padding: 0;
+												width: 160px;
+												height: 160px;
+										}
+
+		/* Portada para pagina tipo articulo */
+
+				section.facebookArticle{
+					height: 240px;
+					margin-bottom: 10px;
+					border: 1px;
+					border-color: black;
+					border-style: solid;
+				}
+
+	/*  Contenido */
+
+			section.content{
+				width: 80%;
+				max-width: 1000px;
+				padding: 20px 0 0;
+			}
+				section.content ul{
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					text-align: center;
+				}
+					section.content ul li{
+						width: 280px;
+						height: 400px;
+						display: inline-block;
+						vertical-align: top;
+						margin-bottom: 30px;
+						background-color: rgba(98,9,255,0.6);
+						box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
+					}
+						section.content ul li article{
+							margin: 0;
+							padding: 0;
+							display: table;
+						}
+							section.content ul li article div.contentImage{
+								height: 260px;
+								display: table-row;
+								text-align: center;
+							}
+								section.content ul li article div.contentImage a img{
+									margin: 10px 20px 10px 20px;
+									width: 240px;
+									height: 240px;
+								}
+							section.content ul li article hr{
+								margin: 0 5% 0 5%;
+								background: #F64740;
+								border: none;
+								height: 1px;
+
+							}
+							section.content ul li article div.description{
+								margin: 0;
+								padding: 0;
+								height: 140px;
+								display: table-row;
+								text-align: center;
+							}
+								section.content ul li article div.description p{
+									display: table-cell;
+									vertical-align: middle;
+									font-family: helvetica,arial,sans-serif;
+									font-size: 22px;
+								}
+
+		/* Contenido para paginas tipo articulo. */
+
+				section.content article.articleContent{
+					min-height: 1000px;
+					width: 100%;
+					padding-top: 20px;
+					background: rgba(98,9,255,0.6);
+					box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
+				}
+					section.content article.articleContent h2{
+						margin-top: 10px;
+						font-size: 2em;
+						font-family: arial;
+						font-style: bold;
+						text-align: center;
+					}
+					section.content article.articleContent hr{
+						margin: 20px 10% 10px 10%;
+						background: orange;
+						height: 2px;
+						border: none;
+					}
+					section.content article.articleContent p{
+						margin: 30px auto;
+						width: 80%;
+						max-width: 800px;
+						min-width: 280px;
+						font-family: arial;
+						text-align: justify;
+					}
+
+	/* Pie de Pagina*/
+
+		footer{
+			width: 100%;
+			padding: 0;
+			margin:auto;
+			height: auto;
+			position: absolute;
+			border: 1px;
+			border-color: black;
+			border-style: solid;
+			background-color: rgb(86,90,92);
+		}
+			footer div{
+				width: 100%;
+				max-width: 1200px;
+				margin: auto;
+				margin-bottom: 1px;
+				display: block;
+				border: 1px;
+				border-color: black;
+				border-style: solid;
+			}
+				footer div ul {
+					max-width: 1200px;
+					margin: 0 auto;
+					padding: 0;
+					list-style: none;
+					text-align: center;
+					display: block;
+					border: 1px;
+					border-color: black;
+					border-style: solid;
+				}
+
+				footer div ul li{
+							margin: 6px;
+							display: inline-block;
+							vertical-align: center;
+							border: 1px;
+							border-color: black;
+							border-style: solid;
+					}
+
+	/* Seccion de Publicidad */
+
+					footer div ul.advertisementA li{
+						width: 308px;
+						height: 80px;
+					}
+
+					footer div ul.advertisementB  li{
+						width: 240px;
+						height: 70px;
+					}
+
+	/* Seccion de Redes Sociales  */
+
+			footer div.socialNetworks{
+				width: 100%;
+				height: auto;
+				text-align: center;
+				border: 1px;
+				border-color: black;
+				border-style: solid;
+			}
+				footer div.socialNetworks p{
+					font-style: sans-serif;
+					margin: 0 auto;
+					padding: 0;
+				}
+					footer div.socialNetworks ul li{
+						width: 40px;
+						height: 40px;
+						margin: 2px;
+					}
+/* Seccion de Informacion Final */
+			footer div.finalInfo{
+				width: 100%;
+				height: auto;
+				border: 1px;
+				border-color: black;
+				border-style: solid;
+			}
+				footer div.finalInfo ul{
+					max-width: 1200px:;
+					width: 100%;
+					margin: auto;
+					height:auto;
+					text-align: center;
+					vertical-align: center;
+				}
+					footer div.finalInfo ul li{
+						width: calc(900px/3);
+						border: 1px;
+						border-color: black;
+						border-style:
+					}
+						footer div.finalInfo ul li ul {
+							width: auto;
+							margin: 0;
+							padding: 0;
+							list-style: none;
+							text-align: center;
+						}
+							footer div.finalInfo ul li ul li{
+								margin: 1px;
+								border: 1px;
+								border-color: black;
+								border-style: solid;
+							}
+
+
+/*  Ajustes generales */
+
+	
+	a{
+		text-decoration: none;
+		justify-content:center;
+	}
+
+	p{
+		text-align: center;
+	}
+
+	ul{
+		text-decoration: none;
+		text-align: center;
+		list-style: none;
+	}
+		h1, h2, h3, h4, h5, h6{
+			text-align: center;
+			text-decoration: none;
+		}

@@ -1,0 +1,247 @@
+/* Variables */
+
+:root {
+	--firstDiameter:195px;
+	--marginFirstCir:20px;
+	--wwidth:100%;
+}
+
+/* General*/
+
+*{
+	padding:0;
+	margin: 0;
+}
+
+body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+/* Cabecera */
+
+	header{
+		width: 100%;
+		height: 31px;
+		background-color: green;
+		position: absolute;
+		display: fixed;
+	}
+		header button{
+			width: auto;	
+			margin: 0;
+			padding: 5px 5px 5px 5px;
+			float:left;
+			background-color:green;
+			border-top: 3px solid transparent;
+			border-bottom: 2px solid transparent;
+			border-left: none;
+			border-right: 3px solid black;
+		}
+			header button:hover{
+				background-color: white;
+			}
+
+		header nav{
+			max-width: 1000px;
+			padding-left: 40%;
+			background-color: none;
+		}
+			header nav ul{
+				list-style: none;
+
+			}
+				header nav 	ul li{
+					padding: 5px 0 5px 0;
+					margin-left: 0;
+					position: relative;
+					display: inline-block;
+					border-top: 2px solid transparent;
+					border-bottom: 2px solid transparent;
+					border-left: 3px solid black;
+					border-right: 3px solid transparent;			
+				}
+					header nav ul li:hover{
+					 	background-color: white;	
+					 }
+				 header nav ul li a{
+				 	color: black;
+				 	text-align: center;
+				 	text-decoration: none;
+				 	padding-right: 10px;
+				 	padding-left: 10px;
+				}
+					header nav ul li ul{
+						display: none;
+					}
+					header nav ul li:hover ul {
+						margin-top: 5px;
+						background-color: green;
+						list-style: none;
+						display: block;
+						position: absolute;
+					}
+						header nav ul li ul li{
+							width: 100%;
+							border-top: 2px solid transparent;
+							border-bottom: 2px solid transparent;
+							border-left: none;
+							border-right: 3px solid black;	
+						}
+	
+/* Contenido */
+
+		section{
+			margin: auto;
+		}
+/* Portada */
+
+		section.facebook{		
+			width: 100%;
+			height: 380px;
+			margin-bottom: 10px;
+			background-color: gray;
+		}
+
+		section.firstInfo{
+			width: 80%;
+			max-width: 1000px;
+			height: auto;
+			margin: auto;
+			margin-bottom: 30px;
+			background-color: blue;
+		}
+			section.firstInfo ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+			}
+				section.firstInfo li{
+					width:var(--firstDiameter);
+					height:var(--firstDiameter);
+					margin-left: 30px;
+					margin-bottom: 20px;
+					background-color: red;
+					display: inline-block;
+					vertical-align: top;
+					border-radius: calc(var(--firstDiameter)/2);
+				}
+
+/*  Contenido */
+
+		section.content{
+			width: 80%;
+			max-width: 1000px;
+			padding: 20px 0 0;
+			background-color: yellow;
+
+		}
+			section.content ul{	
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+			}
+				section.content ul li{
+					width: 280px;
+					height: 400px;
+					display: inline-block;
+					vertical-align: top;
+					background-color: green;
+					margin-bottom: 30px;
+				}
+
+/* Pie de Pagina*/
+
+	footer{
+		width: 100%;
+		padding: 0;
+		margin:auto;
+		margin-top: 10px;
+		height: auto;
+		position: absolute;
+		background-color: gray;
+	}
+		footer div{
+			width: 90%;
+			max-width: 1200px;
+			margin: auto;
+			margin-bottom: 1px;
+			background: red;
+			display: block;
+		}
+			footer div ul {
+				max-width: 1200px;
+				margin: 0;	
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				display: block;
+			}
+				footer div ul li{
+						margin: 2px;
+						display: inline-block;
+						vertical-align: center;
+						background-color: black;
+				}
+
+/* Seccion de Publicidad */ 
+
+				footer div ul.advertisementA li{
+					width: 320px;
+					height: 80px;
+				}
+
+				footer div ul.advertisementB  li{
+					width: 240px;
+					height: 70px;
+				}
+
+/* Seccion de Redes Sociales  */
+
+		footer div.socialNetworks{
+			width: 100%;
+			height: auto;
+			text-align: center;
+			background-color: white;
+		}
+			footer div.socialNetworks p{
+				font-style: sans-serif;
+				margin: 0 auto;
+				padding: 0;
+			}
+				footer div.socialNetworks ul li{
+					width: 40px;
+					height: 40px;
+					margin: 2px;
+				}
+/* Seccion de Informacion Final */
+		footer div.finalInfo{
+			width: 100%;
+			height: auto;
+			background-color: blue;
+		}
+			footer div.finalInfo ul{
+				max-width: 1200px:;
+				width: 90%;
+				margin-left: 5%;
+				height:auto;
+				text-align: center;
+				vertical-align: center;
+			}
+				footer div.finalInfo ul li{
+					min-width: 1px;
+					min-height: 1px;
+					background-color: gray;
+				}
+					footer div.finalInfo ul li ul {
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						text-align: center;
+					}
+						footer div.finalInfo ul li ul li{
+							margin: 1px;
+							background-color: red;
+						}
