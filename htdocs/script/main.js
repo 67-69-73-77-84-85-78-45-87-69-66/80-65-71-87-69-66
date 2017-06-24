@@ -98,13 +98,13 @@
 
 					clickSlider ++;
 
-					if ( clickSlider > 0 && clickSlider < 4 ) {
+					if ( clickSlider > 0 && clickSlider < 3 ) {
 
 						positionLeft = ( -25 * clickSlider );
 
-					} else if ( clickSlider >= 4 ) {
+					} else if ( clickSlider >= 3 ) {
 
-						clickSlider = 3;
+						clickSlider = 2;
 
 					};
 
@@ -132,7 +132,7 @@
 		
 					clickSlider --;
 
-					if ( clickSlider >= 0 && clickSlider < 4 ) {
+					if ( clickSlider >= 0 && clickSlider < 3 ) {
 
 						positionLeft = ( -25 * clickSlider );
 
@@ -174,7 +174,7 @@
 
 					clickSlider++; 
 
-					if( clickSlider > 0 && clickSlider < 4){
+					if( clickSlider > 0 && clickSlider < 3){
 
 						positionLeft = ( -25 * (clickSlider));
 
@@ -184,7 +184,7 @@
 						
 						})
 
-					} else if ( clickSlider >=4) {
+					} else if ( clickSlider >= 3) {
 
 						clickSlider = 0 ;
 
