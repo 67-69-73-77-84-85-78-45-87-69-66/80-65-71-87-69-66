@@ -1,0 +1,41 @@
+	.bodyCounter{
+		width:100%;
+		height:100%;
+		margin:0;
+		background:rgba(0,0,0,.9);
+	}
+		.counterUNR{
+			margin:77.5px auto 0;
+			height:130px;
+			width:285px;
+		}
+			.lineText{
+				width:100%;
+				margin:0;
+				padding:0;
+				position:relative;
+				display:block;
+				text-align:center;
+			}
+				.lineText li{
+					position:relative;
+					display:inline-block;
+					text-align:center;
+					vertical-align:middle;
+				}
+				.lineText p{
+					color:#fff;
+					font-family:Arial;
+				}
+				.montDay li{
+					margin:0 10px;
+				}
+				.montDay p{
+					font-size:30px;
+				}
+				.hoMinS li{
+					margin:1px 6px;
+				}
+				.hoMinS p{
+					font-size:24px;
+				}

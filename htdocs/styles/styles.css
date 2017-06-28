@@ -778,6 +778,17 @@ body{
 							text-align:justify;
 							word-wrap:break-word;
 						}
+						.seeHereRef{
+							color:red;
+							text-decoration:none;
+						}
+						.seeHereRef:hover{
+							text-decoration:underline;
+							color:blue;
+						}
+							.seeHereRef b:hover{
+								color:blue;
+							}
 							.article b{
 								color:rgb(196,81,83);
 							}
