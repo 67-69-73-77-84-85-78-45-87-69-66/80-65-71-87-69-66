@@ -15,12 +15,19 @@
 			dayDate=parseInt(date.getDate()),
 			month=parseInt(date.getMonth());
 
-		//variables que permiten modificar los atributos p de contador
+		//variables que permiten modificar los atributos p de los numeros del contador
 		var pHour=document.getElementById('hour'),
 			pMinute=document.getElementById('minute'),
 			pSecond=document.getElementById('second'),
 			pDayDate=document.getElementById('day'),
 			pMonth=document.getElementById('month');
+
+		//variables que permiten modificar los atributos p de el texto debajo de los numeros
+		var pUHour=document.getElementById('uHour'),
+			pUMinute=document.getElementById('uMinute'),
+			pUSecond=document.getElementById('uSecond'),
+			pUDayDate=document.getElementById('uDay'),
+			pUMonth=document.getElementById('uMonth');
 
 		//funcion de limpieza usada mas adelante
 		var countValues=function(){
@@ -109,6 +116,33 @@
 			pSecond.textContent="0"+second.toString();
 		}else{
 			pSecond.textContent=second.toString();		
+		};
+
+		//Cambio del texto debajo de los numeros
+		if(month==1){
+			pUMonth.textContent="mes";
+		}else{
+			pUMonth.textContent="meses";
+		};
+		if(dayDate==1){
+			pUDayDate.textContent="dia";
+		}else{
+			pUDayDate.textContent="dias";
+		};
+		if(hour==1){
+			pUHour.textContent="hora";
+		}else{
+			pUHour.textContent="horas";
+		};
+		if(minute==1){
+			pUMinute.textContent="minuto";
+		}else{
+			pUMinute.textContent="minutos";
+		};
+		if(second==1){
+			pUSecond.textContent="segundo";
+		}else{
+			pUSecond.textContent="segundos"		
 		};
 		
 	};
