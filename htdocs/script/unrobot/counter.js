@@ -17,10 +17,15 @@
 
 		//variables que permiten modificar los atributos p de los numeros del contador
 		var pHour=document.getElementById('hour'),
+			pHour2=document.getElementById('hour2'),
 			pMinute=document.getElementById('minute'),
+			pMinute2=document.getElementById('minute2'),
 			pSecond=document.getElementById('second'),
+			pSecond2=document.getElementById('second2'),
 			pDayDate=document.getElementById('day'),
-			pMonth=document.getElementById('month');
+			pDayDate2=document.getElementById('day2'),
+			pMonth=document.getElementById('month'),
+			pMonth2=document.getElementById('month2');
 
 		//variables que permiten modificar los atributos p de el texto debajo de los numeros
 		var pUHour=document.getElementById('uHour'),
@@ -37,6 +42,13 @@
 			minute=0;
 			second=0;
 		}
+
+		//variables tipo string que seran iguales a los valores de date,month,day,etc.(la s es de String)
+		var sMonth,
+			sDay,
+			sHour,
+			sMinute,
+			sSecond;
 
 		//Calculo de la cuenta regresiva de s,min,h,dias,meses
 		second=60-second;
@@ -91,32 +103,45 @@
 			countValues();
 		}
 
-		//Se modifican los p del contador
+		var a;
+		//Se modifican los p con menos de 2 cifras para que aparezcan 0x en el contador, y se guardan una variable string
 		if(month<10){
-			pMonth.textContent="0"+month.toString();
+			sMonth="0"+month.toString();
 		}else{
-			pMonth.textContent=month.toString();
+			sMonth=month.toString();
 		};
 		if(dayDate<10){
-			pDayDate.textContent="0"+dayDate.toString();
+			sDay="0"+dayDate.toString();
 		}else{
-			pDayDate.textContent=dayDate.toString();
+			sDay=dayDate.toString();
 		};
 		if(hour<10){
-			pHour.textContent="0"+hour.toString();
+			sHour="0"+hour.toString();
 		}else{
-			pHour.textContent=hour.toString();
+			sHour=hour.toString();
 		};
 		if(minute<10){
-			pMinute.textContent="0"+minute.toString();
+			sMinute="0"+minute.toString();
 		}else{
-			pMinute.textContent=minute.toString();
+			sMinute=minute.toString();
 		};
 		if(second<10){
-			pSecond.textContent="0"+second.toString();
+			sSecond="0"+second.toString();
 		}else{
-			pSecond.textContent=second.toString();		
+			sSecond=second.toString();		
 		};
+
+		//Se pasan a char y guardan las variables string
+		pMonth.textContent=sMonth.charAt(0);
+		pMonth2.textContent=sMonth.charAt(1);
+		pDayDate.textContent=sDay.charAt(0);
+		pDayDate2.textContent=sDay.charAt(1);
+		pHour.textContent=sHour.charAt(0);
+		pHour2.textContent=sHour.charAt(1);
+		pMinute.textContent=sMinute.charAt(0);
+		pMinute2.textContent=sMinute.charAt(1);
+		pSecond.textContent=sSecond.charAt(0);
+		pSecond2.textContent=sSecond.charAt(1);
 
 		//Cambio del texto debajo de los numeros
 		if(month==1){
