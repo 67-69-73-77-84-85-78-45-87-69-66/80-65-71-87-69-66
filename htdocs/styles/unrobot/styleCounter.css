@@ -25,11 +25,28 @@
 					position:relative;
 					display:inline-block;
 					text-align:center;
-					vertical-align:middle;
+					vertical-align:top;
 				}
 				.lineText p{
-					color:#fff;
+					color:rgb(0,0,0);
 				}
+				.num{
+					height:36px;
+					width:20px;
+					margin:3px .5px;
+					padding:0;
+					display:inline;
+					background:#fff;
+					border:none;
+					border-radius:5px;
+					-moz-border-radius:5px;
+					-webkit-border-radius:5px;
+					font-size:1em;
+					text-decoration:none;
+				}
+					.num p{
+						color:rgb(0,0,0);
+					}
 				.hoMinS li{
 					margin:1px 6px;
 				}

@@ -1,0 +1,341 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>
+			Inicio
+		</title>
+		
+		<meta name="description" content="comité estudiantes ingeniería mecatrónica" />
+		<meta name="keywords" content="robótica,mecatrónica,caocurso robot,seguidor linea,firebot,sumo robot" />
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Last-Modified" content="0">
+		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+
+		<script src="script/jquery3_2_1_min.js"></script>
+		<script src="script/main.js"></script>
+
+		<link rel="shortcut icon" href="images/favicon/buho.ico">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<link rel="stylesheet" type="text/css" href="styles/fontStyle/fontStyleAwesome/fontAwesome.css">
+
+	</head>
+
+	<body>
+
+	<!-- Cabezera -->
+
+	<main class="general">
+
+		<header class="header">
+			<div class="buttonMenu">
+					<a><span class="fa fa-bars"></span></a>
+			</div>
+
+			<nav class="menu" id="menu"><!-- Menu
+										-->
+				<ul>
+					<li>
+						<a href="index.html">Inicio</a>
+					</li><!--
+			 	 --><li>
+						<a>UNROBOT</a>
+						<ul class="subList">
+							<li>
+								<a href="categorias.html">Categorias</a>
+							</li><!--
+						 --><li>
+								<a  href="UNROBOT/reglamentos.html">Reglamentos</a>
+							</li><!--
+						 --><li>
+						 		<a href="https://goo.gl/forms/4kHDXGkmPMW2fBuL2" target="_blank">Inscripción.</a>
+						 	</li>
+						</ul>
+					</li><!--
+				 --><li>
+						<a href="contacto.html">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Portada -->
+
+			<section class="facebook " id="facebook">
+				<div class="slider">
+					<ul class="sliderImages">
+						<li class="sliderImage" sliderImage="1" >
+							<div class="imgSlider slider1">
+								<style type="text/css">
+									.slider1{	
+									background:url(images/slider/1.jpg);
+									background-repeat: no-repeat;
+									background-size:1350px 466px;
+									background-position: center;
+									}
+								</style>
+							</div>
+						</li><!--
+					 --><li class="sliderImage" sliderImage="2" >
+							<div class="imgSlider slider2">
+								<style type="text/css">
+									.slider2{	
+									background:url(images/slider/2.jpg);
+									background-repeat:no-repeat;
+									background-size:1350px 466px;
+									background-position: center;
+									}
+								</style>
+							</div>
+							<div class="captionSlider">
+							</div>
+						</li><!--
+					 --><li class="sliderImage" sliderImage="3" >
+							<div class="imgSlider slider3">
+								<style type="text/css">
+									.slider3{	
+									background:url(images/slider/3.jpg);
+									background-repeat:no-repeat;
+									background-size:1350px 466px;
+									background-position: center;
+									}
+								</style>
+							</div>
+						</li>
+					</ul>
+
+
+					<div class="sliderArrowLeft">
+						<span class="fa fa-chevron-left">
+						</span>
+					</div>
+
+					<div class="sliderArrowRight">
+						<span class="fa fa-chevron-right">
+						</span>
+					</div>
+
+					<div class="indicators">
+						<ul class="positionSlider">
+							<li class="indicatorPosition" positionIndicator="1">
+								<span class="fa fa-circle">
+								</span>
+							</li>
+							<li class="indicatorPosition" positionIndicator="2">
+								<span class="fa fa-circle">
+								</span>
+							</li>
+							<li class="indicatorPosition" positionIndicator="3">
+								<span class="fa fa-circle">
+								</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</section>
+
+
+			<!-- Contenido -->
+
+			<section class="content" id="content">
+				<section class="indexContent">
+
+				<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+				<link rel="stylesheet" type="text/css" href="styles/unrobot/styleCounter.css">
+				<div class="bodyCounter">
+					<div class="counterUNR">
+						<p>
+							El UNROBOT iniciará en:
+						</p>
+						<ul class="lineText hoMinS">
+							<li>
+								<button class="num"><p id="month" class="month"></p></button>
+								<button class="num"><p id="month2" class="month"></p></button>
+								<p id="uMonth"class="typeUnit">meses</p>
+							</li>
+							<li>
+								<p>-</p>
+							</li>
+							<li>
+								<button class="num"><p id="day" class="day"></p></button>
+								<button class="num"><p id="day2" class="day"></p></button>								
+								<p id="uDay" class="typeUnit">dias</p>	
+							</li>
+							<li>
+								<p></p>
+							</li>
+						</ul>
+						<ul class="lineText hoMinS">
+							<li>
+								<button class="num"><p id="hour" class="hour"></p></button>
+								<button class="num"><p id="hour2" class="hour"></p></button>
+								<p id="uHour"class="typeUnit">horas</p>
+							</li>
+							<li>
+								<p>:</p>
+							</li>
+							<li>
+								<button class="num"><p id="minute" class="minute"></p></button>
+								<button class="num"><p id="minute2" class="minute"></p></button>
+								<p id="uMinute" class="typeUnit">minuntos</p>
+							</li>
+							<li>
+								<p>:</p>
+							</li>
+							<li>
+								<button class="num"><p id="second" class="second"></p></button>
+								<button class="num"><p id="second2" class="second"></p></button>
+								<p id="uSecond"class="typeUnit">segundos</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<script src="script/unrobot/counter.js"></script>
+
+					<ul class="infoPages">
+						<li class="listInf">
+							<article>
+								<div class="contentImage article1">
+									<style type="text/css">
+										.contentImage.article1{	
+											 background:url('images/content/index/unRobot2017.jpg');
+											 background-repeat:no-reapeat;
+											 background:cover;
+											 background-size:500px;
+											 background-position:center; 
+										}
+									</style>
+									<a></a>
+								</div>
+
+								<div class="description">
+									<h2>
+										<a>UNROBOT 2017</a>
+									</h2>
+									<p>
+										UN Robot es un evento organizado por<br>
+										estudiantes de CEIMTUN para promover<br>
+										el aprendizaje y...<br>
+									</p>
+								</div>
+							</article>
+							<nav class="infoNag">
+								<ul>
+									<li class="buttonInf">
+										<a href="categorias.html">Categorias</a>
+									</li>
+									<li class="buttonInf">
+										<a href="https://goo.gl/forms/4kHDXGkmPMW2fBuL2" target="_blank">Inscribete</a>
+									</li>
+								</ul>
+							</nav>
+						</li>
+					 	<li class="listInf">
+							<article>
+								<div href="UNROBOT/reglamentos.html"class="contentImage article2">
+									<style type="text/css">
+										.contentImage.article2{	
+											 background:url('images/content/index/reglamentoUNR.png');
+											 background-repeat:no-reapeat;
+											 background: cover;
+											 background-size: 500px;
+											 background-position:center; 
+										}
+									</style>
+									<a href="UNROBOT/reglamentos.html">
+									</a>
+								</div>
+
+								<div class="description">
+									<h2>
+										<a href="UNROBOT/reglamentos.html">Reglamento UNROBOT</a>
+									</h2>
+									<p>
+										Observa aqui los reglamentos del<br>
+										UNROBOT 2017<br>
+									</p>
+								</div>
+							</article>
+							<nav class="infoNag">
+								<ul>
+									<li class="buttonInf">
+										<a href="UNROBOT/reglamentos.html">Ir</a>
+									</li>
+								</ul>
+							</nav>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+	</main>
+		<!-- Pie de pagina -->
+
+		<footer class="general">
+
+			<div class="advertisement">
+
+				<ul id="advertisementA" class="advertisementA">
+					<li>
+						<img src="images/advertisement/advertisementA/ieeeRAS.png">
+					</li><!--
+				 --><li>
+				 		<img src="images/advertisement/advertisementA/ieeeUnal.png">
+					</li><!--
+				 -->
+				</ul>
+				<ul id="advertisementB" class="advertisementB">
+					<li>
+						<img src="images/advertisement/advertisementB/colsein.png">
+					</li><!--
+				 --><li>
+				 		<img src="images/advertisement/advertisementB/tiendaDeRobotica.png">
+					</li><!--
+				 -->
+				</ul>
+
+			</div>
+
+			<hr class="lineFooter1">
+
+			<hr class="lineFooter2">
+
+			<div class="unalLogo">
+				<a href="https://www.ingenieria.bogota.unal.edu.co/" target="_blank">
+						<img src="images/advertisement/principalAdvertisement/unalLogo.png">
+				</a>
+			</div>
+			
+			<div class="socialNetworks">
+			
+				<ul>
+					<li id="youtube">
+						<a href="https://www.youtube.com/user/CEIMTUN" target="_blank">
+							<img src="images/advertisement/socialNetworks/flaticon/png/youtube.png">
+						</a>
+					</li><!--
+				 --><li id="twitter">
+				 		<a href="https://twitter.com/ceimtun?lang=es" target="_blank">
+				 			<img src="images/advertisement/socialNetworks/flaticon/png/twitter.png">
+			 			</a>
+					</li><!--
+				 --><li id="facebook">
+				 		<a href="https://www.facebook.com/search/posts/?q=ras%20universidad%20nacional%20-%20ceimtun" target="_blank">
+				 			<img src="images/advertisement/socialNetworks/flaticon/png/facebook.png">
+			 			</a>
+					</li><!--
+				 -->
+				</ul>
+			</div>
+
+		</footer>
+
+	</body>
+
+</html>

@@ -36,7 +36,7 @@ AddOutputFilterByType DEFLATE application/x-javascript
 ExpiresActive On
 ExpiresDefault A0
 <FilesMatch "\.(html|htm|php|js|css)$">
-ExpiresDefault A86400
+ExpiresDefault A600
 </FilesMatch>
 <FilesMatch "\.(svg|jpg|png|gif)$">
 ExpiresDefault A86400
