@@ -62,10 +62,13 @@
 		nDay=dayDate;
 		nHour=hour;
 		nMinute=minute;
-		nSecond=second;
+		nSecond=document.getElementById('second');
 
 		//Calculo de la cuenta regresiva de s,min,h,dias,meses
 		second=60-second;
+		$('.s2').css({
+			'animation':'rotate'+' '+'1s'+' '+'linear'				
+		})
 		if(second<60){
 			minute++;
 		}
@@ -155,8 +158,7 @@
 		pMinute2.textContent=sMinute.charAt(1);
 		pSecond.textContent=sSecond.charAt(0);
 		pSecond2.textContent=sSecond.charAt(1);
-
-		//Cambio del texto debajo de los numeros
+	
 
 		if(month==1){
 			pUMonth.textContent="mes";
@@ -183,7 +185,8 @@
 		}else{
 			pUSecond.textContent="segundos"		
 		};
-		
+
+
 	};
 
 	actualizarHora();
