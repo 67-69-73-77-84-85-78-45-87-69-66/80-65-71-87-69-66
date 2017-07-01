@@ -50,6 +50,20 @@
 			sMinute,
 			sSecond;
 
+		//Variables para identificar cuando cambian los valores numericos y animar (n de number)
+		var nMonth,
+			nDay,
+			nHour,
+			nMinute,
+			nSecond;
+
+
+		nMonth=month;
+		nDay=dayDate;
+		nHour=hour;
+		nMinute=minute;
+		nSecond=second;
+
 		//Calculo de la cuenta regresiva de s,min,h,dias,meses
 		second=60-second;
 		if(second<60){
@@ -103,7 +117,6 @@
 			countValues();
 		}
 
-		var a;
 		//Se modifican los p con menos de 2 cifras para que aparezcan 0x en el contador, y se guardan una variable string
 		if(month<10){
 			sMonth="0"+month.toString();
@@ -144,6 +157,7 @@
 		pSecond2.textContent=sSecond.charAt(1);
 
 		//Cambio del texto debajo de los numeros
+
 		if(month==1){
 			pUMonth.textContent="mes";
 		}else{

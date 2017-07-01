@@ -44,7 +44,7 @@
 				}
 				.lineText p{
 					color:rgb(0,0,0);
-				}
+				}	
 				.num{
 					height:36px;
 					width:20px;
@@ -58,6 +58,12 @@
 					-webkit-border-radius:5px;
 					font-size:1em;
 					text-decoration:none;
+					-webkit-perspective:100;
+					perspective:100;
+					-webkit-transform-style:preserve-3d;
+					transform-style:preserve-3d;
+					-webkit-transition:.7s ease;
+					transition:.5s ease;
 				}
 					.num p{
 						color:rgb(0,0,0);

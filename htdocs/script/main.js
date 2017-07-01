@@ -57,30 +57,22 @@
 				*/
 				$('.indicatorPosition').click(function(){
 
-					clickSlider =  $(this).attr('positionIndicator') - 1;
-
-					positionLeft = ( -25 * (clickSlider));
-
-					pauseSlider = 1 ;
+					clickSlider=$(this).attr('positionIndicator')-1;
+					positionLeft=(-25*(clickSlider));
+					pauseSlider=1;
 
 					$('.sliderImage').animate({
-
 						left: positionLeft + '%'
-
 					});
-
 					clearInterval(timeSlider);
 
 					$('.indicatorPosition').css({
 						'opacity' : '0.5'
 					});
-
 					$(this).css({
 						'opacity' : '1'
 					});
-
-					console.log(clickSlider);
-
+					//console.log(clickSlider);
 				});
 				/*
 				/
@@ -99,19 +91,13 @@
 					clickSlider ++;
 
 					if ( clickSlider > 0 && clickSlider < 3 ) {
-
 						positionLeft = ( -25 * clickSlider );
-
 					} else if ( clickSlider >= 3 ) {
-
 						clickSlider = 2;
-
 					};
 
 					$('.sliderImage').animate({
-
 						left: positionLeft + '%'
-
 					});
 
 					$('.indicatorPosition').css({
@@ -120,32 +106,22 @@
 					$('.positionSlider li:nth-child(' + (clickSlider+1) + ')').css({
 						'opacity' : '1'
 					});
-
-					console.log(clickSlider);
-
+					//console.log(clickSlider);
 					clearInterval(timeSlider);
 
 				});
 
 
 				$('.sliderArrowLeft').click(function(){
-		
 					clickSlider --;
-
 					if ( clickSlider >= 0 && clickSlider < 3 ) {
-
 						positionLeft = ( -25 * clickSlider );
-
 					} else if ( clickSlider <= 0 ) {
-
 						clickSlider = 0;
-
 					};
 
 					$('.sliderImage').animate({
-
 						left: positionLeft + '%'
-
 					});
 
 					$('.indicatorPosition').css({
