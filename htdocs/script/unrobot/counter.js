@@ -11,7 +11,16 @@
 		nMinute2=' ',
 		nSecond=' ',
 		nSecond2=' ';
-
+	var nnMonth=' ',
+		nnMonth2=' ',
+		nnDay=' ',
+		nnDay2=' ',
+		nnHour=' ',
+		nnHour2=' ',
+		nnMinute=' ',
+		nnMinute2=' ',
+		nnSecond=' ',
+		nnSecond2=' ';
 
 
 	var actualizarHora=function(){
@@ -63,12 +72,6 @@
 			sHour,
 			sMinute,
 			sSecond;
-
-		nMonth=month;
-		nDay=dayDate;
-		nHour=hour;
-		nMinute=minute;
-		nSecond=document.getElementById('second');
 
 		//Calculo de la cuenta regresiva de s,min,h,dias,meses
 		second=60-second;
@@ -165,48 +168,45 @@
 		//Guarda las variables de char de los numeros para compararlas
 		nMonth=sMonth.charAt(0);
 		nMonth2=sMonth.charAt(1);
-		nDayDate=sDay.charAt(0);
-		nDayDate2=sDay.charAt(1);
+		nDay=sDay.charAt(0);
+		nDay2=sDay.charAt(1);
 		nHour=sHour.charAt(0);
 		nHour2=sHour.charAt(1);
 		nMinute=sMinute.charAt(0);
 		nMinute2=sMinute.charAt(1);
-		nSecond=sSecond.charAt(1);
-		nSecond2=sSecond.charAt(0);
+		nSecond=sSecond.charAt(0);
+		nSecond2=sSecond.charAt(1);
 
 		//Animacion de rotacion
-		if(nSecond!=pSecond2){
-			//$(".second2").addClass("rotation");
+		if(nSecond!=nnSecond){
 			document.getElementById('s').classList.add("rotation");
-
 		}
-		if(nSecond2!=pSecond){
-			//$(".second").addClass("rotation");
+		if(nSecond2!=nnSecond2){
 			document.getElementById('s2').classList.add("rotation");
 		}
-		if(nMinute!=pMinute){
-			document.getElementById('minute').classList.add("rotation");
+		if(nMinute!=nnMinute){
+			document.getElementById('m').classList.add("rotation");
 		}
-		if(nMinute2!=pMinute2){
-			document.getElementById('minute2').classList.add("rotation");
+		if(nMinute2!=nnMinute2){
+			document.getElementById('m2').classList.add("rotation");
 		}
-		if(nHour!=pHour){
-			document.getElementById('hour').classList.add("rotation");
+		if(nHour!=nnHour){
+			document.getElementById('h').classList.add("rotation");
 		}
-		if(nHour2!=pHour2){
-			document.getElementById('hour2').classList.add("rotation");
+		if(nHour2!=nnHour2){
+			document.getElementById('h2').classList.add("rotation");
 		}
-		if(nDayDate!=pDayDate){
-			document.getElementById('day').classList.add("rotation");
+		if(nDay!=nnDay){
+			document.getElementById('d').classList.add("rotation");
 		}
-		if(nDayDate2!=pDayDate2){
-			document.getElementById('day2').classList.add("rotation");
+		if(nDay2!=nnDay2){
+			document.getElementById('d2').classList.add("rotation");
 		}
-		if(nMonth!=pMonth){
-			document.getElementById('month').classList.add("rotation");
+		if(nMonth!=nnMonth){
+			document.getElementById('M').classList.add("rotation");
 		}
-		if(nMonth2!=pMonth2){
-			document.getElementById('month2').classList.add("rotation");
+		if(nMonth2!=nnMonth2){
+			document.getElementById('M2').classList.add("rotation");
 		};
 
 
@@ -236,11 +236,34 @@
 			pUSecond.textContent="segundos"		
 		};
 
+		//remueve la clase de css que contiene la animacion de manera que pueda volver a agregarse luego
 		function removeAnimation(){
 			document.getElementById('s').classList.remove("rotation");
 			document.getElementById('s2').classList.remove("rotation");
+			document.getElementById('m').classList.remove("rotation");
+			document.getElementById('m2').classList.remove("rotation");
+			document.getElementById('h').classList.remove("rotation");
+			document.getElementById('h2').classList.remove("rotation");
+			document.getElementById('d').classList.remove("rotation");
+			document.getElementById('d2').classList.remove("rotation");
+			document.getElementById('M').classList.remove("rotation");
+			document.getElementById('M2').classList.remove("rotation");
 		}
-		var interval=setTimeout(removeAnimation,990);
+		var interval=setTimeout(removeAnimation,801);
+
+		//Guarda las variables para comparar y ver si ha cambiado o no el numero
+		nnMonth=nMonth;
+		nnMonth2=nMonth2;
+		nnDay=nDay;
+		nnDay2=nDay2;
+		nnHour=nHour;
+		nnHour2=nHour2;
+		nnMinute=nMinute;
+		nnMinute2=nMinute2;
+		nnSecond=nSecond;
+		nnSecond2=nSecond2;
+
+		console.log("nnD: "+nDay);
 
 	};
 

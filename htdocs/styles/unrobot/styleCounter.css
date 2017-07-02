@@ -97,27 +97,27 @@
 		from{
 			transform:rotateX(0deg);
 		}to{
-			transform:rotateX(-360deg);
+			transform:rotateX(360deg);
 		}
 	}
 	@-webkit-keyframes rotate{
 		from{
 			-webkit-transform:rotateX(0deg);
 		}to{
-			-webkit-transform:rotateX(-360deg);
+			-webkit-transform:rotateX(360deg);
 		}
 	}
 	@-moz-keyframes rotate{
 		from{
 			-moz-transform:rotateX(0deg);
 		}to{
-			-moz-transform:rotateX(-360deg);
+			-moz-transform:rotateX(360deg);
 		}
 	}
 	@-o-keyframes rotate{
 		from{
 			-o-transform:rotateX(0deg);
 		}to{
-			-o-transform:rotateX(-360deg);
+			-o-transform:rotateX(360deg);
 		}
 	}
