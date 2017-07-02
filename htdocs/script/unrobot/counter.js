@@ -1,9 +1,23 @@
 (function(){
-	var countContinue=1;
+
+	//Variables para identificar cuando cambian los valores numericos y animar (n de number)
+	var nMonth=' ',
+		nMonth2=' ',
+		nDay=' ',
+		nDay2=' ',
+		nHour=' ',
+		nHour2=' ',
+		nMinute=' ',
+		nMinute2=' ',
+		nSecond=' ',
+		nSecond2=' ';
+
+
+
 	var actualizarHora=function(){
 
 		//los valores de estas variable definen la fecha limite, con mes, dia, y hora.
-		var limMonth=7,
+		var limMonth=8,
 			limDayDate=28,
 			limHour=7;
 
@@ -50,14 +64,6 @@
 			sMinute,
 			sSecond;
 
-		//Variables para identificar cuando cambian los valores numericos y animar (n de number)
-		var nMonth,
-			nDay,
-			nHour,
-			nMinute,
-			nSecond;
-
-
 		nMonth=month;
 		nDay=dayDate;
 		nHour=hour;
@@ -66,9 +72,6 @@
 
 		//Calculo de la cuenta regresiva de s,min,h,dias,meses
 		second=60-second;
-		$('.s2').css({
-			'animation':'rotate'+' '+'1s'+' '+'linear'				
-		})
 		if(second<60){
 			minute++;
 		}
@@ -80,8 +83,8 @@
 		if(hour<24){
 			dayDate++;
 		}
-		dayDate=30-dayDate;
-		if(dayDate<29){
+		dayDate=31-dayDate;
+		if(dayDate<31){
 			month++;
 		};
 		month=limMonth-month;
@@ -158,7 +161,51 @@
 		pMinute2.textContent=sMinute.charAt(1);
 		pSecond.textContent=sSecond.charAt(0);
 		pSecond2.textContent=sSecond.charAt(1);
-	
+
+		//Guarda las variables de char de los numeros para compararlas
+		nMonth=sMonth.charAt(0);
+		nMonth2=sMonth.charAt(1);
+		nDayDate=sDay.charAt(0);
+		nDayDate2=sDay.charAt(1);
+		nHour=sHour.charAt(0);
+		nHour2=sHour.charAt(1);
+		nMinute=sMinute.charAt(0);
+		nMinute2=sMinute.charAt(1);
+		nSecond=sSecond.charAt(0);
+		nSecond2=sSecond.charAt(1);
+
+		//Animacion de rotacion
+		if(nSecond!=pSecond){
+			$(".second2").addClass("rotation");
+		}
+		if(nSecond2!=pSecond2){
+			$(".second").addClass("rotation");
+		}
+		if(nMinute!=pMinute){
+			var n=1;
+		}
+		if(nMinute2!=pMinute2){
+			var n=1;
+		}
+		if(nHour!=pHour){
+			var n=1;
+		}
+		if(nHour2!=pHour2){
+			var n=1;
+		}
+		if(nDayDate!=pDayDate){
+			var n=1;
+		}
+		if(nDayDate2!=pDayDate2){
+			var n=1;
+		}
+		if(nMonth!=pMonth){
+			var n=1;
+		}
+		if(nMonth2!=pMonth2){
+			var n=1;
+		};
+
 
 		if(month==1){
 			pUMonth.textContent="mes";
@@ -186,10 +233,12 @@
 			pUSecond.textContent="segundos"		
 		};
 
-
 	};
 
+	function removeClass(){
+		$(".second2").removeClass("rotation");
+		$(".second").removeClass("rotation");
+	}
 	actualizarHora();
-	var intervalo = setInterval(actualizarHora, 1000);
-
+	var intervalo = setInterval(actualizarHora,1000);
 }())
