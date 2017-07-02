@@ -171,39 +171,42 @@
 		nHour2=sHour.charAt(1);
 		nMinute=sMinute.charAt(0);
 		nMinute2=sMinute.charAt(1);
-		nSecond=sSecond.charAt(0);
-		nSecond2=sSecond.charAt(1);
+		nSecond=sSecond.charAt(1);
+		nSecond2=sSecond.charAt(0);
 
 		//Animacion de rotacion
-		if(nSecond!=pSecond){
-			$(".second2").addClass("rotation");
+		if(nSecond!=pSecond2){
+			//$(".second2").addClass("rotation");
+			document.getElementById('s').classList.add("rotation");
+
 		}
-		if(nSecond2!=pSecond2){
-			$(".second").addClass("rotation");
+		if(nSecond2!=pSecond){
+			//$(".second").addClass("rotation");
+			document.getElementById('s2').classList.add("rotation");
 		}
 		if(nMinute!=pMinute){
-			var n=1;
+			document.getElementById('minute').classList.add("rotation");
 		}
 		if(nMinute2!=pMinute2){
-			var n=1;
+			document.getElementById('minute2').classList.add("rotation");
 		}
 		if(nHour!=pHour){
-			var n=1;
+			document.getElementById('hour').classList.add("rotation");
 		}
 		if(nHour2!=pHour2){
-			var n=1;
+			document.getElementById('hour2').classList.add("rotation");
 		}
 		if(nDayDate!=pDayDate){
-			var n=1;
+			document.getElementById('day').classList.add("rotation");
 		}
 		if(nDayDate2!=pDayDate2){
-			var n=1;
+			document.getElementById('day2').classList.add("rotation");
 		}
 		if(nMonth!=pMonth){
-			var n=1;
+			document.getElementById('month').classList.add("rotation");
 		}
 		if(nMonth2!=pMonth2){
-			var n=1;
+			document.getElementById('month2').classList.add("rotation");
 		};
 
 
@@ -233,12 +236,14 @@
 			pUSecond.textContent="segundos"		
 		};
 
+		function removeAnimation(){
+			document.getElementById('s').classList.remove("rotation");
+			document.getElementById('s2').classList.remove("rotation");
+		}
+		var interval=setTimeout(removeAnimation,990);
+
 	};
 
-	function removeClass(){
-		$(".second2").removeClass("rotation");
-		$(".second").removeClass("rotation");
-	}
 	actualizarHora();
 	var intervalo = setInterval(actualizarHora,1000);
 }())

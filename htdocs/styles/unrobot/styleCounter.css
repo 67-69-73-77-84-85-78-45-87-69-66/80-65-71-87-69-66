@@ -28,7 +28,7 @@
 				position:relative;
 				display:inline-block;
 				text-align:center;
-				perspective:2500px;
+				perspective:300px;
 			}
 				.lineText li{
 					position:relative;
@@ -88,10 +88,10 @@
 					-o-animation-name:rotate;
 					-moz-animation-name:rotate;
 					-webkit-animation-name:rotate;
-					animation-duration:.5s;
-					-o-animation-duration:.5s;
-					-moz-animation-duration:.5s;
-					-webkit-animation-duration:.5s;
+					animation-duration:.8s;
+					-o-animation-duration:.8s;
+					-moz-animation-duration:.8s;
+					-webkit-animation-duration:.8s;
 				}
 	@keyframes rotate{
 		from{
