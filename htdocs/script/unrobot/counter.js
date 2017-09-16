@@ -26,8 +26,8 @@
 	var actualizarHora=function(){
 
 		//los valores de estas variable definen la fecha limite, con mes, dia, y hora.
-		var limMonth=8,
-			limDayDate=28,
+		var limMonth=10,
+			limDayDate=3,
 			limHour=7;
 
 		//Manera de obtener las fechas automaticamente
@@ -86,12 +86,17 @@
 		if(hour<24){
 			dayDate++;
 		}
-		dayDate=31-dayDate;
-		if(dayDate<31){
+		dayDate=30-dayDate;
+		if(dayDate<30){
 			month++;
 		};
 		month=limMonth-month;
 
+		console.log("mes: "+month+"\n"+
+					"dia: "+dayDate+"\n"+
+					"hora: "+hour+"\n"
+					);
+		
 		//Limpia los valores para evitar errores y poder evaluar cuando el mes es 0;
 		if(month<0){
 			month=0;
@@ -120,10 +125,16 @@
 					countValues();
 				};
 			};
+		}else if(month==1){
+			if(dayDate+limDayDate<30){
+				month=0;
+				dayDate+=limDayDate;
+			};
 		};
 		//Es un seguro, si se llegara agragar una fecha que ya ha pasado,esto deja todo automaticamente en 0
 		if(month<0||dayDate<0||hour<0||minute<0||second<0){
 			countValues();
+			console.log("nope");
 		}
 
 		//Se modifican los p con menos de 2 cifras para que aparezcan 0x en el contador, y se guardan una variable string
@@ -209,7 +220,7 @@
 			document.getElementById('M2').classList.add("rotation");
 		};
 
-
+		//Se cambia el texto dependiendo de si es plural o no
 		if(month==1){
 			pUMonth.textContent="mes";
 		}else{
@@ -263,7 +274,7 @@
 		nnSecond=nSecond;
 		nnSecond2=nSecond2;
 
-		console.log("nnD: "+nDay);
+		//console.log("nnD: "+nDay);
 
 	};
 

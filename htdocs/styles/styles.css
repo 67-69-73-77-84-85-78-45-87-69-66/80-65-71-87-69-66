@@ -28,15 +28,13 @@ body{
  	font-family:ancizar,helvetica,arial,sans-serif;
 	text-decoration:none;
 }
-
-
 	main{
 		width:100%;
 		height:100%;
 	}
 
 	.general{
-		display: table-row-group;
+		display:table-row-group;
 	}
 	a{
 		justify-content:center;
@@ -51,12 +49,11 @@ body{
 			text-align:center;
 			background:rgba(166,178,176,0.8);
 		}
-
 			header div{
-				display: block;
-				height: auto;
-				width: 100%;
-				height: auto;
+				display:block;
+				height:auto;
+				width:100%;
+				height:auto;
 			}
 				header div a{
 					display:none;
@@ -76,7 +73,6 @@ body{
 				z-index:1000;
 				max-width:1000px;
 				margin:auto;
-				z-index:1000;
 			}
 				header nav ul{
 					list-style:none;
@@ -87,7 +83,6 @@ body{
 						width:110px;
 						display:inline-block;
 						position:relative;
-                        
 					}
 						header nav ul li:hover{
 							background:rgba(166,51,53,0.8);
@@ -106,7 +101,6 @@ body{
 							display:none;
 							position:absolute;
 							width:100%;
-							z-index:1000;
 						}
 							header nav ul li .subList li:hover{
 								background: rgba(166,51,53,0.8);
@@ -147,7 +141,6 @@ body{
 				margin:0;
 				overflow:scroll;
 				background:rgba(177,178,176,0.8);
-				z-index:1002;
 			}
 					header nav ul li{
 						width:100%;
@@ -163,7 +156,6 @@ body{
 							display:none;
 							position:relative;
 							width:100%;
-							z-index:1002;
 						}
 								header nav ul li .subList li{
 									width:100%;

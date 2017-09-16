@@ -1,23 +1,14 @@
 	$(document).ready(main);
-		/*
-		 	Variables Slider
-		*/
+		//Variables Slider
 		var clickSlider = 0;
 		var positionLeft = 0;
 
-		/*
-		 	Variables Menu Boton
-		*/
+		//Variables Menu Boton
 		var counterMenu = 1;
-
 
 		function main(){
 
-			/*
-			==========
-			Movimiento al oprimir el menu
-			==========
-			*/
+			//Movimiento al oprimir el menu
 			$('.buttonMenu').click(function(){
 
 				if(counterMenu == 1 ){
@@ -32,29 +23,15 @@
 					});
 				};
 			});
-			/*
-			//////////
-			Movimiento al oprimir el menu
-			//////////
-			*/
 
-			/*
-			==========
-			Slider
-			==========
-			*/
+			//Slider
 			window.addEventListener('load',init);
 
 			function init(){
 
-
 				var pauseSlider = 0;
 
-				/*
-				=
-					Botones de Posición		
-				=
-				*/
+				//Botones de Posición
 				$('.indicatorPosition').click(function(){
 
 					clickSlider=$(this).attr('positionIndicator')-1;
@@ -74,32 +51,19 @@
 					});
 					//console.log(clickSlider);
 				});
-				/*
-				/
-					Botones de Posición		
-				/
-				*/
-
-
-				/*
-				=
-					Botones flechas izqueirda y derecha		
-				=
-				*/
+				
+				//Botones flechas izqueirda y derecha	
 				$('.sliderArrowRight').click(function(){
 
 					clickSlider ++;
-
 					if ( clickSlider > 0 && clickSlider < 3 ) {
 						positionLeft = ( -25 * clickSlider );
 					} else if ( clickSlider >= 3 ) {
 						clickSlider = 2;
 					};
-
 					$('.sliderImage').animate({
 						left: positionLeft + '%'
 					});
-
 					$('.indicatorPosition').css({
 						'opacity' : '0.5'
 					});
@@ -119,11 +83,9 @@
 					} else if ( clickSlider <= 0 ) {
 						clickSlider = 0;
 					};
-
 					$('.sliderImage').animate({
 						left: positionLeft + '%'
 					});
-
 					$('.indicatorPosition').css({
 						'opacity' : '0.5'
 					});
@@ -139,13 +101,8 @@
 					clearInterval(timeSlider);
 
 				});
-				/*
-				/
-					Botones flechas izqueirda y derecha		
-				/
-				*/
 
-
+				//Cambio de imagenes del slider en el tiempo
 				var timeSlider = window.setInterval( function() { 
 
 					clickSlider++; 
@@ -153,25 +110,16 @@
 					if( clickSlider > 0 && clickSlider < 3){
 
 						positionLeft = ( -25 * (clickSlider));
-
 						$('.sliderImage').animate({
-
 							left: positionLeft + '%'
-						
 						})
-
 					} else if ( clickSlider >= 3) {
 
 						clickSlider = 0 ;
-
 						positionLeft = ( -25 * (clickSlider));
-
 						$('.sliderImage').animate({
-
 							left: '0' + '%'
-						
 						})
-
 					}
 
 					$('.indicatorPosition').css({
@@ -181,39 +129,23 @@
 						'opacity' : '1'
 					});
 
-					console.log(clickSlider)} , 5000 
+					//console.log(clickSlider)
+				},5000 
 
 				);
 				
 			};
-			/*
-			//////////
-			Slider
-			//////////
-			*/
 		};
 
-/*
-==============================
-	Fondo Movimiento
-==============================
-*/
+//Fondo Movimiento
 	$(document).ready(function(){
 
 		$(window).scroll(function(){
 
 			var valueScroll = $(window).scrollTop();
 			var position = (valueScroll * 0.10);
-
 			$('body').css({
 				'background-position' :'0 -' + position + 'px'
 			});
-
 		});
-
 	});
-/*
-////////////////////////
-	Fondo Movimiento
-////////////////////////
-*/
