@@ -459,11 +459,12 @@ body{
 									max-width:800px;
 								}
 						}
-						@media (max-width:683px){
+						@media (max-width:688px){
 								.bigList{
 									width:95%;
 									margin:10px 2.5%; 
 								}
+
 						}
 
 						.listInf{
@@ -474,8 +475,7 @@ body{
 							min-height:405px;
 							display:inline-block;
 							vertical-align:top;
-							margin:2.5%;
-							margin-bottom:30px;
+							margin:30px 2.5%;
 							background-color:#fff;
 							box-shadow:0 10px 10px 10px rgba(0, 0, 0, 0.25);
 						}
@@ -549,7 +549,12 @@ body{
 											color:rgb(256,256,256);
 											cursor:pointer;
 										}
-
+				@media (max-width:688px){
+						.listInf{
+							width:100%;
+							margin:30px auto;
+						}
+				}
 					/*
 						mosaicos
 					*/
@@ -692,8 +697,9 @@ body{
 				}
 					ul.artTitles{
 						width:94%;
+						max-width:1000px;
 						height:auto;
-						margin:0 3%;
+						margin:0 auto;
 					}
 						ul.artTitles li{
 							width:100%;

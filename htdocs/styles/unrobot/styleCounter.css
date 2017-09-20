@@ -93,6 +93,14 @@
 					-moz-animation-duration:.8s;
 					-webkit-animation-duration:.8s;
 				}
+	
+	@media(max-width:688px){
+		.counterUNR{
+			width:94%;
+			max-width:530px;
+			min-width:300px;
+		}
+	}
 	@keyframes rotate{
 		from{
 			transform:rotateX(0deg);

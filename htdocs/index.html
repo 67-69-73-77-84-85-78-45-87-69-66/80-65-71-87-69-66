@@ -199,6 +199,140 @@
 				</div>
 				<script src="script/unrobot/counter.js"></script>
 
+				<h2 class="titleSchedule">Cronograma UNROBOT X (3 al 6 de Octubre)</h2>
+				<ul class="schedule">
+					<div class="scheWrapper">
+						<li class="scheCol scheHours">
+							<div class="rowSche scheTitle"> <h2>Hora</h2> </div>
+							<div class="rowSche"> <p>8:00am</p> </div>
+							<div class="rowSche"> <p>9:00am</p> </div>
+							<div class="rowSche"> <p>10:00am</p> </div>
+							<div class="rowSche"> <p>11:00am</p> </div>
+							<div class="rowSche"> <p>12:00pm</p> </div>
+							<div class="rowSche"> <p>1:00pm</p> </div>
+							<div class="rowSche"> <p>2:00pm</p> </div>
+							<div class="rowSche"> <p>3:00pm</p> </div>
+						</li>
+						<li class="scheCol scheDay">
+							<div class="rowSche scheTitle"> <h2>Martes 3</h2> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheBig"> <p>Competencia Minisumo</p> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheBig"> <p>Competencia Sumo</p> </div>
+						</li>
+						<li class="scheCol scheDay">
+							<div class="rowSche scheTitle"> <h2>Miercoles 4</h2> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheBig"> <p>Competencia Sumo Escolar</p> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheBig"> <p>Competencia Seguidor de Linea Escolar </p> </div>
+						</li>
+					</div>
+					<div class="scheWrapper">
+						<li class="scheCol scheDay">
+							<div class="rowSche scheTitle"> <h2>Jueves 5</h2> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheBig"> <p> Competencia Seguidor de Linea Velocista</p> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheBig"> <p>Competencia Seguidor de Linea Multinivel</p> </div>
+						</li>
+						<li class="scheCol scheDay">
+							<div class="rowSche scheTitle"> <h2>Viernes 6</h2> </div>
+							<div class="rowSche"> <p>Registro</p> </div>
+							<div class="rowSche scheMid"> <p>Competencia Micromouse</p> </div>
+							<div class="rowSche scheMid"> <p>Competencia Firebot</p> </div>
+							<div class="rowSche"> <p>Regitro</p> </div>
+							<div class="rowSche scheBig"> <p>Evento de Cierre</p> </div>
+						</li>
+						<li class="scheCol scheHours">
+							<div class="rowSche scheTitle"> <h2>Hora</h2> </div>
+							<div class="rowSche"> <p>8:00am</p> </div>
+							<div class="rowSche"> <p>9:00am</p> </div>
+							<div class="rowSche"> <p>10:00am</p> </div>
+							<div class="rowSche"> <p>11:00am</p> </div>
+							<div class="rowSche"> <p>12:00pm</p> </div>
+							<div class="rowSche"> <p>1:00pm</p> </div>
+							<div class="rowSche"> <p>2:00pm</p> </div>
+							<div class="rowSche"> <p>3:00pm</p> </div>
+						</li>
+					</div>
+				</ul>
+				<style type="text/css">
+					.titleSchedule{
+						width:90%;
+						height:auto;
+						max-width:1140px;
+						margin:30px auto -29px;
+						padding:4px 0;
+						background:crimson;
+						text-align:center;
+						vertical-align:center;
+						border-radius:5px;	
+						font-size:18px;
+						color:white;
+					}
+					.schedule{
+						width:90%;
+						max-width:1140px;
+						height:auto;
+						margin:30px auto;	
+						list-style:none;
+						display:flex;
+						flex:row wrap;
+					}
+					.scheWrapper{
+						width:50%;
+						display:flex;
+						flex-direction:row;
+					}
+						.scheCol{
+							height:308px;
+							width:calc(40%);
+							margin:1px;
+							padding:1px;
+							background:crimson;
+							display:flex;
+							flex-direction:column;
+							flex-wrap: nowrap;
+						}
+						.scheHours{
+							width:calc(20%);
+						}
+							.rowSche{
+								height:32px;
+								width:calc(100% - 2px);
+								margin:1px;
+								font-size:16px;
+								background:rgb(256,256,256);
+								display:flex;
+								text-align:center;
+								flex-direction:column;
+								vertical-align:center;
+							}
+							.scheTitle, .scheTitle h2{
+								background:crimson;
+								font-size:16px;
+								color:white;
+							}
+							.scheBig{
+								height:102px;
+							}
+							.scheMid{
+								height:50px;
+							}
+				@media(max-width:688px){
+					.schedule,.titleSchedule{
+						width:94%;
+						max-width:530px;
+						min-width:300px;
+						flex-direction:column;
+					}
+					.scheWrapper{
+						width:100%;
+					}
+				}
+
+				</style>
 					<ul class="infoPages">
 						<li class="listInf">
 							<article>
